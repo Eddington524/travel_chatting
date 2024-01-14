@@ -20,6 +20,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qBu-pu-0bK">
                                 <rect key="frame" x="4" y="163" width="385" height="659"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="jht-pc-cyd">
                                 <rect key="frame" x="4" y="103" width="393" height="56"/>
@@ -34,6 +35,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qBu-pu-0bK" secondAttribute="trailing" constant="4" id="2UK-iP-kcm"/>
                             <constraint firstItem="jht-pc-cyd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="4" id="JZ6-9d-ewM"/>
@@ -52,6 +54,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="953.43511450381675" y="3.5211267605633805"/>
+        </scene>
+        <!--Chat Detail View Controller-->
+        <scene sceneID="NYI-qa-MQY">
+            <objects>
+                <viewController storyboardIdentifier="ChatDetailViewController" id="hue-aq-Qby" customClass="ChatDetailViewController" customModule="travel_chatting" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3HL-GD-b46">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IcV-xY-VsZ">
+                                <rect key="frame" x="4" y="59" width="385" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TgW-Bk-n4U" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="784" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BEM-Mu-gmS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BEM-Mu-gmS" firstAttribute="bottom" secondItem="TgW-Bk-n4U" secondAttribute="bottom" id="28d-2r-G0z"/>
+                            <constraint firstItem="TgW-Bk-n4U" firstAttribute="leading" secondItem="3HL-GD-b46" secondAttribute="leadingMargin" id="2Ek-Cm-CU3"/>
+                            <constraint firstItem="IcV-xY-VsZ" firstAttribute="leading" secondItem="BEM-Mu-gmS" secondAttribute="leading" constant="4" id="6v6-Fc-QJA"/>
+                            <constraint firstItem="TgW-Bk-n4U" firstAttribute="centerX" secondItem="IcV-xY-VsZ" secondAttribute="centerX" id="Rmk-ZT-e1j"/>
+                            <constraint firstItem="BEM-Mu-gmS" firstAttribute="trailing" secondItem="IcV-xY-VsZ" secondAttribute="trailing" constant="4" id="YaW-WI-c8G"/>
+                            <constraint firstItem="TgW-Bk-n4U" firstAttribute="top" secondItem="IcV-xY-VsZ" secondAttribute="bottom" id="cCv-rB-L1Z"/>
+                            <constraint firstItem="IcV-xY-VsZ" firstAttribute="top" secondItem="BEM-Mu-gmS" secondAttribute="top" id="gz0-hy-69U"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailTableView" destination="IcV-xY-VsZ" id="qC3-t0-B39"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WiH-7W-SvS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1890.8396946564885" y="3.5211267605633805"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xfe-tI-T60">

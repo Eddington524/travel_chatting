@@ -43,28 +43,34 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ChattingTableViewCell.identifier, for: indexPath) as! ChattingTableViewCell
         
-        cell.oneProfileImage.image =  UIImage(named: mockChatList[indexPath.row].chatroomImage[0])
+        let rowIdx = mockChatList[indexPath.row]
         
-        cell.chattingRoomName.text = mockChatList[indexPath.row].chatroomName
+        cell.oneProfileImage.image =  UIImage(named: rowIdx.chatroomImage[0])
         
-        let lastCount = mockChatList[indexPath.row].chatList.count - 1
+        cell.chattingRoomName.text = rowIdx.chatroomName
         
-        cell.recentChatLabel.text = mockChatList[indexPath.row].chatList[lastCount].message
+        let lastCount = rowIdx.chatList.count - 1
         
-        let date: String = mockChatList[indexPath.row].chatList[lastCount].date
+        cell.recentChatLabel.text = rowIdx.chatList[lastCount].message
         
-        let dateFormartter = DateFormatter()
-        dateFormartter.dateFormat = "yyyy-MM-dd HH:mm"
-        let convertDate = dateFormartter.date(from: date)
-        
-        dateFormartter.dateFormat = "yy.MM.dd"
-        let resultDate = dateFormartter.string(from: convertDate!)
-        
-        cell.dateLabel.text = resultDate
+        cell.dateLabel.text = rowIdx.chatList[lastCount].formatted
         
         return cell
     }
+
+}
+
+extension ViewController{
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ChatDetailViewController") as! ChatDetailViewController
+        
+        vc.contentId = mockChatList[indexPath.row].chatroomId
+        
+        navigationController?.pushViewController(vc, animated: true)
+        
+        vc.contentId = mockChatList[indexPath.row].chatroomId
+    }
 }
 

@@ -16,6 +16,12 @@
 		DCFA7C972B53C95500962E83 /* ChattingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFA7C952B53C95500962E83 /* ChattingTableViewCell.swift */; };
 		DCFA7C982B53C95500962E83 /* ChattingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCFA7C962B53C95500962E83 /* ChattingTableViewCell.xib */; };
 		DCFA7C9B2B53CA0100962E83 /* ChattingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFA7C9A2B53CA0100962E83 /* ChattingData.swift */; };
+		DCFA7C9D2B54058A00962E83 /* ChatDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFA7C9C2B54058A00962E83 /* ChatDetailViewController.swift */; };
+		DCFA7CA12B5406DE00962E83 /* othersChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFA7C9F2B5406DE00962E83 /* othersChatTableViewCell.swift */; };
+		DCFA7CA22B5406DE00962E83 /* othersChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCFA7CA02B5406DE00962E83 /* othersChatTableViewCell.xib */; };
+		DCFA7CA52B54070300962E83 /* myCahtTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFA7CA32B54070300962E83 /* myCahtTableViewCell.swift */; };
+		DCFA7CA62B54070300962E83 /* myCahtTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCFA7CA42B54070300962E83 /* myCahtTableViewCell.xib */; };
+		DCFA7CA92B543E0700962E83 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DCFA7CA82B543E0700962E83 /* IQKeyboardManagerSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,11 @@
 		DCFA7C952B53C95500962E83 /* ChattingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingTableViewCell.swift; sourceTree = "<group>"; };
 		DCFA7C962B53C95500962E83 /* ChattingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChattingTableViewCell.xib; sourceTree = "<group>"; };
 		DCFA7C9A2B53CA0100962E83 /* ChattingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChattingData.swift; path = ../../../ChattingData.swift; sourceTree = "<group>"; };
+		DCFA7C9C2B54058A00962E83 /* ChatDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailViewController.swift; sourceTree = "<group>"; };
+		DCFA7C9F2B5406DE00962E83 /* othersChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = othersChatTableViewCell.swift; sourceTree = "<group>"; };
+		DCFA7CA02B5406DE00962E83 /* othersChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = othersChatTableViewCell.xib; sourceTree = "<group>"; };
+		DCFA7CA32B54070300962E83 /* myCahtTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCahtTableViewCell.swift; sourceTree = "<group>"; };
+		DCFA7CA42B54070300962E83 /* myCahtTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = myCahtTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCFA7CA92B543E0700962E83 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +80,7 @@
 				DCFA7C802B53C29E00962E83 /* SceneDelegate.swift */,
 				DCFA7C822B53C29E00962E83 /* ViewController.swift */,
 				DCFA7C842B53C29E00962E83 /* Main.storyboard */,
+				DCFA7C9E2B54059700962E83 /* chatDetail */,
 				DCFA7C872B53C2A100962E83 /* Assets.xcassets */,
 				DCFA7C892B53C2A100962E83 /* LaunchScreen.storyboard */,
 				DCFA7C8C2B53C2A100962E83 /* Info.plist */,
@@ -92,6 +105,18 @@
 			path = data;
 			sourceTree = "<group>";
 		};
+		DCFA7C9E2B54059700962E83 /* chatDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DCFA7C9C2B54058A00962E83 /* ChatDetailViewController.swift */,
+				DCFA7C9F2B5406DE00962E83 /* othersChatTableViewCell.swift */,
+				DCFA7CA02B5406DE00962E83 /* othersChatTableViewCell.xib */,
+				DCFA7CA32B54070300962E83 /* myCahtTableViewCell.swift */,
+				DCFA7CA42B54070300962E83 /* myCahtTableViewCell.xib */,
+			);
+			path = chatDetail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -108,6 +133,9 @@
 			dependencies = (
 			);
 			name = travel_chatting;
+			packageProductDependencies = (
+				DCFA7CA82B543E0700962E83 /* IQKeyboardManagerSwift */,
+			);
 			productName = travel_chatting;
 			productReference = DCFA7C7B2B53C29E00962E83 /* travel_chatting.app */;
 			productType = "com.apple.product-type.application";
@@ -136,6 +164,9 @@
 				Base,
 			);
 			mainGroup = DCFA7C722B53C29E00962E83;
+			packageReferences = (
+				DCFA7CA72B543E0700962E83 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = DCFA7C7C2B53C29E00962E83 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -151,9 +182,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCFA7C8B2B53C2A100962E83 /* LaunchScreen.storyboard in Resources */,
+				DCFA7CA62B54070300962E83 /* myCahtTableViewCell.xib in Resources */,
 				DCFA7C882B53C2A100962E83 /* Assets.xcassets in Resources */,
 				DCFA7C862B53C29E00962E83 /* Main.storyboard in Resources */,
 				DCFA7C982B53C95500962E83 /* ChattingTableViewCell.xib in Resources */,
+				DCFA7CA22B5406DE00962E83 /* othersChatTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +202,9 @@
 				DCFA7C812B53C29E00962E83 /* SceneDelegate.swift in Sources */,
 				DCFA7C9B2B53CA0100962E83 /* ChattingData.swift in Sources */,
 				DCFA7C972B53C95500962E83 /* ChattingTableViewCell.swift in Sources */,
+				DCFA7CA52B54070300962E83 /* myCahtTableViewCell.swift in Sources */,
+				DCFA7CA12B5406DE00962E83 /* othersChatTableViewCell.swift in Sources */,
+				DCFA7C9D2B54058A00962E83 /* ChatDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +433,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DCFA7CA72B543E0700962E83 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DCFA7CA82B543E0700962E83 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCFA7CA72B543E0700962E83 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DCFA7C732B53C29E00962E83 /* Project object */;
 }

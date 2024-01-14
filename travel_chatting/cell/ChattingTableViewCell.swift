@@ -23,6 +23,7 @@ class ChattingTableViewCell: UITableViewCell {
         super.awakeFromNib()
         chattingRoomName.font = .systemFont(ofSize: 16)
         chattingRoomName.font = .boldSystemFont(ofSize: 12)
+        chattingRoomName.textColor = .black
         
         recentChatLabel.numberOfLines = 0
         recentChatLabel.font = .systemFont(ofSize: 12)
